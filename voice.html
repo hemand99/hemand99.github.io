@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Cloning - Hemand Portfolio</title>
+  <!-- Font Awesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations (optional) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your main style file (style1.css) -->
+  <link rel="stylesheet" href="style1.css" />
+  <!-- Additional styles for the Voice Cloning page -->
+  <style>
+    #voice-cloning {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    #voice-cloning h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    #voice-cloning h2 {
+      font-size: 2rem;
+      color: #077b32;
+      margin: 20px 0 10px;
+    }
+    #voice-cloning p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .know-more-btn {
+      display: inline-block;
+      background-color: #077b32;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .know-more-btn:hover {
+      transform: translateY(-3px);
+      background-color: #055f25;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (You can reuse your site's navigation structure) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Voice Cloning Project Section -->
+  <section id="voice-cloning" data-aos="fade-up" data-aos-duration="1500">
+    <h1>Neural Voice Cloning and Real-Time Text-to-Speech System</h1>
+    <p>
+      This project focused on designing and implementing a highly realistic voice cloning and text-to-speech (TTS) system using state-of-the-art deep learning architectures. The goal was to replicate a specific speaker’s voice with exceptional accuracy and convert textual inputs into speech that closely mimics natural human vocal patterns.
+    </p>
+    <p>
+      The system architecture was composed of three core components. First, a speaker encoder extracts unique vocal features from a short audio clip to capture the speaker’s voice identity. Second, a synthesizer module transforms text into mel-spectrograms – intermediate representations of speech – and finally, a vocoder converts these spectrograms into audible speech using waveform synthesis techniques. Built on Tacotron-style architectures in TensorFlow, this pipeline ensures enhanced naturalness and clarity.
+    </p>
+    <p>
+      To refine the system, NLP-based preprocessing was applied to improve pronunciation, adjust pause timing, and handle punctuation more effectively, reducing synthesis errors by approximately 30%. Optimized for real-time inference using GPU acceleration, the system processes dynamic text inputs with minimal latency.
+    </p>
+    <p>
+      This project significantly enhanced my practical knowledge of neural speech synthesis, voice cloning models, and data preprocessing for audio generation. It demonstrates great potential in applications such as personalized virtual assistants, audiobook narration, dubbing, and assistive technologies for the visually impaired.
+    </p>
+    <!-- Know More Button -->
+    <a href="https://colab.research.google.com/drive/11460ci9R8mnoi_-PlHwL2ulkn4kCGLjP" target="_blank" class="know-more-btn" data-aos="fade-up" data-aos-duration="1500">
+      Know More
+    </a>
+  </section>
+  
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  
+  <!-- JavaScript for Navigation (Hamburger Menu) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLP Project - Reddit Text Compiler</title>
+  <!-- Font Awesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations (optional) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your main style file (style1.css) -->
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    /* Inline styles for project-specific elements */
+    #nlp-project {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    #nlp-project h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    #nlp-project h2 {
+      font-size: 2rem;
+      color: #077b32;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    #nlp-project p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .project-intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0 auto 30px;
+      max-width: 800px;
+      text-align: center;
+      color: #f0f0f0;
+    }
+    .know-more-btn {
+      display: inline-block;
+      background-color: #077b32;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .know-more-btn:hover {
+      transform: translateY(-3px);
+      background-color: #055f25;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (Reusing your navigation structure) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- NLP Project Section -->
+  <section id="nlp-project" data-aos="fade-up" data-aos-duration="1500">
+    <h1>Automated Reddit Comment Analysis with Transformer-Based NLP</h1>
+    <p>
+      This project focuses on building an automated system to extract and classify Reddit comments using advanced Natural Language Processing (NLP) techniques powered by transformer-based models. The goal was to analyze user discussions from any public Reddit post and classify each comment either based on sentiment (positive/negative) or content safety (NSFW vs. safe content). This system has practical applications in content moderation, sentiment analysis, and real-time social media monitoring.
+    </p>
+    <p>
+      To accomplish this, I used the Python Reddit API Wrapper (<code>praw</code>) to programmatically retrieve top-level and nested comments from a specified Reddit thread. The system cleans and parses raw comment text while filtering out unnecessary metadata. Subsequently, the Hugging Face <code>transformers</code> library was employed to load two fine-tuned DistilBERT models—one for binary sentiment classification and another for detecting NSFW content. The results, along with the raw comments, were structured into a tabular format using Pandas and exported as CSV.
+    </p>
+    <p>
+      This end-to-end pipeline demonstrates not only predictive modeling for movie financial success by analyzing features like budget, revenue, and popularity but also leverages unsupervised learning techniques to uncover hidden patterns within movie data. It integrates advanced NLP with both supervised and unsupervised methods to deliver actionable insights for content moderation and decision-making.
+    </p>
+    <h2>Skills Demonstrated</h2>
+    <p>
+      The project highlights my capabilities in integrating supervised classification with unsupervised clustering, using transformer-based models (DistilBERT), and applying advanced NLP techniques for content moderation. Additionally, it showcases my skills in data engineering, model evaluation, and building scalable machine learning workflows.
+    </p>
+    <!-- Know More Button linking to the repo -->
+    <a href="https://github.com/hemand99/Reddit_text_compiler" target="_blank" class="know-more-btn" data-aos="fade-up" data-aos-duration="1500">
+      Know More
+    </a>
+  </section>
+  
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  
+  <!-- JavaScript for Navigation (Hamburger Menu) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>

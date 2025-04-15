@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Project - Predicting Movie Success</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your main style file -->
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <!-- Navigation (Reusing your Navigation structure) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ML Project Section -->
+  <section id="ml-project" style="padding: 60px 20px; background: #111; color: #fff; text-align: center;">
+    <div class="ml-container" style="max-width: 900px; margin: 0 auto;">
+      <h1 data-aos="fade-up" data-aos-duration="1500" style="margin-bottom: 30px;">
+        Predicting Movie Success with Machine Learning (Supervised and Unsupervised Models)
+      </h1>
+      
+      <p data-aos="fade-up" data-aos-duration="1500" class="project-intro">
+        This project explores the use of both supervised and unsupervised learning techniques to analyze and predict the financial success of movies using real-world movie metadata. The dataset includes key features such as budget, revenue, popularity, vote count, runtime, and average rating. The primary objective was to build a predictive model that determines whether a movie is likely to be financially successful (i.e., revenue exceeds budget), while also using unsupervised learning to identify patterns and groupings within the movie data.
+      </p>
+      
+      <h2 data-aos="fade-up" data-aos-duration="1500" style="margin: 30px 0 10px; color: #077b32;">Supervised Learning: Classification Models</h2>
+      <p data-aos="fade-up" data-aos-duration="1500">
+        To classify movies as either "successful" or "not successful," I implemented and compared several supervised learning algorithms, including Logistic Regression, Naive Bayes, and Decision Tree Classifier. Each model was trained using feature sets tailored to its underlying assumptions. Logistic Regression and Naive Bayes were applied to scaled or binarized numerical features, while the Decision Tree model leveraged raw, unscaled data to preserve interpretability.
+        During development, separate train-test splits were used for each model’s unique preprocessing pipeline. For final evaluation, all models were retrained using a consistent 70/30 disjoint split. Logistic Regression achieved 78% accuracy, followed by Decision Tree at 72% and Naive Bayes at 71%.
+      </p>
+
+      <h2 data-aos="fade-up" data-aos-duration="1500" style="margin: 30px 0 10px; color: #077b32;">Unsupervised Learning: Clustering and Pattern Discovery</h2>
+      <p data-aos="fade-up" data-aos-duration="1500">
+        To complement classification, unsupervised techniques such as K-Means, Hierarchical Clustering, and DBSCAN were applied to explore relationships between budget, popularity, runtime, and vote count. Dimensionality reduction via PCA projected high-dimensional data into interpretable visual spaces, revealing natural clusters like high-budget blockbusters, critically acclaimed low-budget films, and niche mid-range productions.
+      </p>
+
+      <h2 data-aos="fade-up" data-aos-duration="1500" style="margin: 30px 0 10px; color: #077b32;">Skills Demonstrated</h2>
+      <p data-aos="fade-up" data-aos-duration="1500">
+        This project demonstrates my ability to integrate supervised and unsupervised learning in a cohesive data science workflow, showcasing skills in data preprocessing, feature engineering, model training, evaluation, and visualization. It reflects my practical understanding of both classification and clustering approaches and how to structure model comparisons with consistent train-test splits.
+      </p>
+
+      <p data-aos="fade-up" data-aos-duration="1500">
+        By merging predictive modeling with exploratory analysis, the project illuminates how machine learning can not only predict financial success but also reveal hidden trends critical for decision-making in film production, marketing, and analytics.
+      </p>
+      
+      <!-- Know More Button -->
+      <div style="margin-top: 40px;" data-aos="fade-up" data-aos-duration="1500">
+        <a href="https://sites.google.com/view/filimfacts/home?authuser=0" target="_blank" class="project-btn" style="padding: 12px 30px; background-color: #077b32; color: #fff; text-decoration: none; font-size: 1.2rem; border-radius: 8px; transition: transform 0.3s, background-color 0.3s;">
+          Know More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  
+  <!-- JavaScript for Navigation (Hamburger Menu) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <!-- Optional: Link to your external JS file -->
+  <script src="script1.js"></script>
+</body>
+</html>

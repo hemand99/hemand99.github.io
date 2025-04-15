@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papers & Patents - Predictive Maintenance System</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your main style file -->
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    /* Inline styles specific to the patent page (optional: merge these into style1.css) */
+    #patent-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #f0f0f0;
+      line-height: 1.6;
+      text-align: center;
+    }
+    #patent-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    #patent-content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .certificate-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #077b32;
+      color: #fff;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .certificate-btn:hover {
+      background-color: #055f25;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Section (common to your portfolio) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index1.html">Home</a>
+        <a href="index1.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="pp.html" class="active">Papers & Patents</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index1.html">Home</a>
+        <a href="index1.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="pp.html" class="active">Papers & Patents</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Patent Content Section -->
+  <section id="patent-content" data-aos="fade-up" data-aos-duration="1500">
+    <h1>AI-Driven Predictive Maintenance System for Hybrid Vehicle Powertrains</h1>
+    <p>
+      In this project, I successfully developed an AI-driven predictive maintenance system specifically designed for hybrid vehicle powertrains, significantly enhancing vehicle reliability, performance, and safety through the strategic use of machine learning and data science.
+    </p>
+    <p>
+      Initially, I built a robust data acquisition framework capable of capturing and processing real-time data streams from diverse vehicle sensors. By employing a serial data communication protocol, I seamlessly translated these raw sensor inputs into structured parameter-value pairs. This allowed me to systematically store critical vehicle health snapshots in a cloud-based database with accurate timestamps, providing a detailed historical record of vehicle conditions.
+    </p>
+    <p>
+      Next, I leveraged sophisticated machine learning methodologies to implement active rule-based systems. Through careful integration of expert domain knowledge, I was able to define intelligent rules tailored to predict potential failures and unusual behaviors. These predictive rules continuously evaluated real-time data against historical patterns, enabling dynamic detection of abnormalities and effective anticipation of necessary maintenance actions well ahead of actual failures.
+    </p>
+    <p>
+      Moreover, I designed and integrated a responsive real-time controlling unit that autonomously detects deviations from normal operational parameters. This control mechanism activates immediate responses and generates timely alerts, delivering critical warning signals directly to vehicle operators or maintenance personnel. This proactive approach effectively reduces downtime, significantly improves vehicle lifespan, and ensures operational safety.
+    </p>
+    <p>
+      Further, to enhance efficiency and scalability, I optimized backend database management processes using advanced SQL queries and structured back-end protocols. This efficient data handling capability ensured that the system could effectively manage, analyze, and extract insights from extensive vehicle-generated datasets, enabling faster and more accurate decision-making.
+    </p>
+    <p>
+      Additionally, my implementation incorporated advanced vehicle-to-vehicle (V2V) communication technologies, enabling the system to intelligently interpret and utilize data exchanged between neighboring vehicles. By analyzing these communications, the predictive system could make informed real-time decisions regarding the optimal functioning of the powertrain, further improving predictive accuracy, driver safety, and overall vehicle control.
+    </p>
+    <p>
+      To facilitate continuous human oversight and interaction, I developed an intuitive graphical user interface (GUI). This interactive front-end allowed users and maintenance experts to visually assess vehicle status, easily update predictive rules, and input new failure conditions based directly on sensor data. This user-friendly design improved the ease and accuracy of monitoring and intervention, ensuring continuous improvement and adaptability of the predictive maintenance system.
+    </p>
+    <p>
+      In summary, by integrating advanced machine learning and comprehensive data science techniques, my project delivered a powerful, intelligent, and adaptive predictive maintenance solution. This proactive and data-driven approach significantly enhances vehicle safety, reduces maintenance costs, optimizes performance, and ensures operational excellence for hybrid vehicle powertrains.
+    </p>
+    
+    <!-- Certificate Button -->
+    <a class="certificate-btn" href="https://drive.google.com/file/d/1uL6Jdj_23cFpNr6uKPTreI-OHC_h7AGs/view" target="_blank">
+      View Certificate
+    </a>
+  </section>
+  
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  
+  <!-- Navigation JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        document.querySelector(".dropdown").style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>

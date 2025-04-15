@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papers - Hemand Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your main style file (style1.css) -->
+  <link rel="stylesheet" href="style1.css" />
+  <!-- Inline styles specific to this page (optional: move to style1.css) -->
+  <style>
+    #paper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      background-color: #0a0a0a;
+      border-radius: 10px;
+      color: #f0f0f0;
+      line-height: 1.7;
+    }
+    #paper h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+    #paper p {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+    .certificate-btn {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #077b32;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .certificate-btn:hover {
+      background-color: #055f25;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (Reuse your existing navigation structure) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Paper Section -->
+  <section id="paper" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Intelligent Robotic Arm Control Using ML</h2>
+    <p>
+      In this project, I served as a Machine Learning Engineer, where my primary responsibilities involved designing and implementing advanced intelligent control systems for a sophisticated 5-Degrees-of-Freedom (5-DOF) robotic arm specifically tailored for complex industrial tasks. My role encompassed developing robust machine learning models and sophisticated artificial intelligence algorithms that significantly enhanced the robotic arm's operational precision, reliability, and real-time adaptability, effectively automating intricate industrial processes.
+    </p>
+    <p>
+      As part of my responsibilities, I meticulously designed and trained predictive models using comprehensive sensor data gathered from high-precision servo motors, ultrasonic sensors, and rotary encoders integrated into the robotic system. These machine learning models were crafted to interpret sensor inputs accurately, enabling the robotic arm to achieve highly precise positioning, fluid motion control, and effective handling of objects with varying characteristics. By applying advanced techniques such as supervised learning and real-time predictive analytics, my models ensured consistent performance and minimized errors, even in rapidly changing environmental conditions.
+    </p>
+    <p>
+      Further, I successfully integrated advanced AI-driven control mechanisms utilizing an Arduino UNO microcontroller along with the HC-05 Bluetooth module, providing seamless wireless communication and enabling remote monitoring and intervention. This integration allowed the robotic arm to autonomously adjust its operations based on real-time sensory feedback and external command inputs, achieving adaptive, autonomous decision-making capabilities critical for high-performance tasks in dynamic industrial settings.
+    </p>
+    <p>
+      Moreover, my work involved iterative testing, evaluation, and optimization of machine learning algorithms to enhance accuracy, stability, and responsiveness. Through rigorous experimentation and continuous refinement, the developed algorithms significantly improved the robotic arm’s capability to autonomously execute complex pick-and-place and sorting tasks, ensuring higher consistency and repeatability compared to traditional control methods.
+    </p>
+    <p>
+      Additionally, the AI systems I developed contributed substantially to workplace safety and productivity by enabling autonomous operations in hazardous environments—such as areas with high temperatures, extreme pressures, or risky conditions—without compromising operational efficiency or accuracy. This effectively reduced human exposure to potential dangers and minimized the occurrence of workplace incidents, thereby fostering a safer and more productive industrial environment.
+    </p>
+    <p>
+      Ultimately, through my dedicated efforts as a Machine Learning Engineer on this project, I successfully implemented an intelligent, adaptive, and high-performance robotic solution, significantly advancing the state-of-the-art in industrial automation and robotics. My contributions directly resulted in enhanced precision, reduced human error, increased operational safety, and elevated industrial productivity standards, demonstrating the transformative potential of machine learning and artificial intelligence in modern industrial systems.
+    </p>
+    <!-- View Certificate Button -->
+    <a class="certificate-btn" href="https://drive.google.com/file/d/12t4ho1ghaia52isYkIQyLd6kqwB28vz2/view?usp=sharing" target="_blank">
+      View Certificate
+    </a>
+  </section>
+  
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  
+  <!-- Navigation JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>

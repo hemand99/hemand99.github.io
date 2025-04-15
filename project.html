@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Hemand Portfolio</title>
+  <!-- Font Awesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your style file (style1.css) -->
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <!-- Navigation (Reusing your Navigation structure) -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="project-container" data-aos="fade-up" data-aos-duration="1500">
+      <h2>Projects</h2>
+      <p class="project-intro">
+        Welcome to my projects page! Here you’ll find a selection of my work spanning various areas such as machine learning, natural language processing, voice cloning, and a Rasa-based chat bot. Each project reflects my passion for innovative, cutting-edge solutions. Click any project to view more details or visit the associated repository.
+      </p>
+      <div class="project-buttons">
+        <a href="ml_project.html" target="_blank" class="project-btn">ML Project</a>
+        <a href="nlp.html" target="_blank" class="project-btn">NLP-Reddit</a>
+        <a href="llm.html" target="_blank" class="project-btn">LLM</a>
+        <a href="voice.html" target="_blank" class="project-btn">Voice Cloning</a>
+        <a href="rasa.html" target="_blank" class="project-btn">Rasa chatbot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+
+  <!-- JavaScript for Navigation (Hamburger Menu) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>

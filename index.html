@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to your style file -->
+  <link rel="stylesheet" href="style1.css" />
+  <title>Hemand Portfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <!-- Main navigation links -->
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achivements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <!-- Mobile dropdown navigation -->
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achivements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="main-container">
+      <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+        <img src="main1.jpg" alt="Portfolio image" />
+      </div>
+      <div class="content">
+        <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">
+          Hey I'm <span>Hemand</span>
+        </h1>
+        <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+          I'm a <span class="typewriter-text"></span><label>|</label>
+        </div>
+        <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+          Welcome to my digital universe. I am a visionary data scientist and machine learning engineer, transforming raw data into dynamic insights that spark breakthrough innovations and empower intelligent decisions. Explore my portfolio and experience the perfect fusion of analytical mastery and creative problem-solving.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="about-me">
+    <h2 data-aos="fade-up" data-aos-duration="1500">About Me</h2>
+    
+    <section id="about-me">
+        
+        <p data-aos="fade-up" data-aos-duration="1500" style="text-align: justify; color: #f0f0f0; margin-bottom: 30px;">
+          I am currently pursuing a Master of Science in Data Science with a focus on machine learning and natural language processing (NLP). My passion for these fields has already led to several accomplishments, including published patents and research papers that reflect my commitment to advancing these fields through innovation. Whether I'm developing predictive machine learning models or building NLP systems that help computers understand human language, I thrive on transforming complex data problems into accessible solutions. With a strong foundation in statistics and programming, complemented by hands-on experience in AI research, I bring both technical expertise and an endless curiosity to every project.
+        </p>
+        
+        <!-- Tab Buttons -->
+        <div class="about-tabs">
+          <button class="tab-button active" data-target="#skills">Skills</button>
+          <button class="tab-button" data-target="#experience">Experience</button>
+          <button class="tab-button" data-target="#education">Education</button>
+        </div>
+        
+        <!-- Tab Panels -->
+        <div class="tab-content">
+          <!-- Skills Tab -->
+          <div id="skills" class="tab-panel active" data-aos="fade-up" data-aos-duration="1500">
+            <div class="skills-container">
+              <div class="skill-box">
+                <h3>Programming</h3>
+                <p>Python, R, Pandas, NumPy</p>
+              </div>
+              <div class="skill-box">
+                <h3>Databases</h3>
+                <p>SQL, MySQL, MongoDB</p>
+              </div>
+              <div class="skill-box">
+                <h3>Data Visualization</h3>
+                <p>Tableau, Matplotlib, Seaborn, Plotly, ggplot2</p>
+              </div>
+              <div class="skill-box">
+                <h3>IDEs</h3>
+                <p>Jupyter Notebook, R Studio, VS Code, Spyder, Minitab, SQL Server Management Studio, Hadoop</p>
+              </div>
+              <div class="skill-box">
+                <h3>Cloud</h3>
+                <p>Google Cloud</p>
+              </div>
+              <div class="skill-box">
+                <h3>Others</h3>
+                <p>NLP, Machine learning modela, Mathematics, Statistical Modeling, Hypothesis Testing, Predictive Analytics, Software Development, Data Structures, Scikit-Learn, Web Scraping, Azure ML, Databricks, CI/CD, ML Ops</p>
+              </div>
+              <div class="skill-box">
+                <h3>Interests</h3>
+                <p>NLP, Machine Learning, Statistics, Data Mining, Transformers, LLM, Multimodal Models, Artificial Intelligence (AI), Big Data Analytics</p>
+              </div>
+              <div class="skill-box">
+                <h3>Languages</h3>
+                <p>English, Tamil (Native)</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Experience Tab -->
+          <div id="experience" class="tab-panel" data-aos="fade-up" data-aos-duration="1500">
+            <h3>Experience</h3>
+            <div class="experience-item">
+              <h4>Research Intern – AI &amp; Predictive Maintenance</h4>
+              <span>May 2022 – Jun 2023 | Sri Krishna College of Engineering and Technology, Tamilnadu, India</span>
+              <ul>
+                <li>Developed machine learning models to predict vehicle component failures with 87% accuracy.</li>
+                <li>Designed and implemented a robust data pipeline integrating V2V communication, improving anomaly detection efficiency by 35% and reducing false positives by 40%.</li>
+                <li>Built an interactive real-time dashboard that reduced response times by 30% for maintenance alerts.</li>
+              </ul>
+            </div>
+            <div class="experience-item">
+              <h4>Data Analyst &amp; Deep Learning Intern</h4>
+              <span>Oct 2021 – Mar 2022 | DeepVisionTech.AI, Bengaluru, India</span>
+              <ul>
+                <li>Established web scraping pipelines achieving 95–99% data extraction accuracy while maintaining an error rate below 5%.</li>
+                <li>Enhanced NLP preprocessing workflows, boosting model F1 scores to 0.8 for improved query resolution.</li>
+                <li>Developed a custom ANN-based machine learning pipeline with 98.79% precision, reducing computation time by 20%.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Education Tab -->
+          <div id="education" class="tab-panel" data-aos="fade-up" data-aos-duration="1500">
+            <h3>Education</h3>
+            <div class="education-item">
+              <h4>University of Colorado Boulder</h4>
+              <span>Aug 2024 – May 2026</span>
+              <p>
+                <strong>Master of Science in Data Science</strong><br />
+                GPA: 3.667<br />
+                Focused on advanced data analytics, machine learning, and big data management through rigorous coursework and practical projects.
+              </p>
+            </div>
+            <div class="education-item">
+              <h4>Sri Krishna College of Engineering and Technology</h4>
+              <span>Aug 2019 – Apr 2023</span>
+              <p>
+                <strong>Bachelor of Engineering in Mechatronics Engineering</strong><br />
+                GPA: 3.334/4.0<br />
+                Developed a strong foundation in engineering principles, quantitative analysis, and robotics through comprehensive academic and project work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contact / Social Links Section -->
+      <section id="contact">
+        <div class="contact-container">
+          <h2 data-aos="fade-up" data-aos-duration="1500">Get in Touch</h2>
+          <div class="contact-links">
+            <a href="mailto:hera8311@colorado.edu" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hemand-adish-rameshkumar-674a04251/" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Hemandadish" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- AOS animation script -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({ offset: 0 });
+      </script>
+      <!-- Link to your JavaScript file -->
+      <script src="script1.js"></script>
+      </body>
+      </html>
+  
