@@ -44,118 +44,65 @@
     </div>
   </nav>
   
-  <!-- Current Research Section -->
-  <section id="current-research" style="max-width: 900px; margin: 0 auto; padding: 60px 20px; color: #f0f0f0;">
-    <h1 data-aos="fade-up" data-aos-duration="1500" style="text-align: center; margin-bottom: 30px;">
-      Current Research
-    </h1>
+<!-- Current Research Section -->
+<section id="current-research" style="max-width: 900px; margin: 0 auto; padding: 60px 20px; color: #f0f0f0;">
+  <h1 data-aos="fade-up" data-aos-duration="1500" style="text-align: center; margin-bottom: 30px;">
+    Current Research
+  </h1>
 
-    <!-- Research Proposal Title -->
-    <h2 data-aos="fade-up" data-aos-duration="1500" style="color: #fff; margin-bottom: 20px;">
-      Self-Supervised Learning for Tabular Data: Bridging the Gap with Vision and NLP
-    </h2>
+  <!-- Research 1: Concept-Level Decision Intelligence -->
+  <h2 data-aos="fade-up" data-aos-duration="1500" style="color: #fff; margin-bottom: 20px;">
+    Concept-Level Decision Intelligence using Reinforcement Learning and Large Concept Models (LCM)
+  </h2>
 
-    <!-- Portfolio Summary -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;"></h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      This research addresses a critical gap in machine learning: the lack of effective self-supervised learning (SSL) methods for tabular data. While SSL has transformed computer vision and natural language processing by reducing the need for labeled data, tabular data remains largely untapped. This project proposes a novel, generalizable SSL framework specifically designed for heterogeneous tabular datasets, enabling models to learn meaningful representations without relying on expensive manual labels.
-    </p>
+  <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Problem Statement</h3>
+  <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
+    Traditional sentiment-based financial models can detect emotional tone (positive or negative) but fail to capture 
+    concept-level reasoning in online discussions. They overlook deeper cognitive elements such as trust, policy interpretation, 
+    or risk perception, which are critical for making informed investment decisions.
+  </p>
 
-    <!-- Overview -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Overview</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      Tabular data is foundational in domains like healthcare, finance, and supply chain management. However, labeling such data is often time-consuming, costly, and domain-specific. Traditional supervised methods struggle in low-label regimes and do not fully exploit the vast amount of unlabeled data typically available. By introducing a self-supervised approach, this project aims to unlock the hidden potential of unlabeled tabular data.
-    </p>
+  <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Research Overview</h3>
+  <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
+    This study develops a <strong>Concept-Level Adaptive Decision System</strong> that integrates 
+    <strong>Reinforcement Learning (RL)</strong>, the <strong>Large Concept Model (LCM)</strong>, and 
+    <strong>SONAR semantic embeddings</strong> to interpret social discussions (e.g., Reddit posts) beyond surface-level sentiment. 
+    Each post is mapped into a high-dimensional conceptual space, where its alignment with decision-relevant ideas—such as 
+    investment, risk, trust, and inflation—is measured using <strong>cosine similarity</strong>.
+  </p>
+  <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
+    Through RL, the system dynamically updates <strong>Analytic Hierarchy Process (AHP)</strong> weights based on evolving semantic 
+    relationships, enabling autonomous, context-aware financial decision outputs such as <em>Invest</em>, 
+    <em>Do Not Invest</em>, or <em>Neutral</em>.
+  </p>
 
-    <!-- Motivation -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Motivation</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      In industries where tabular data is prevalent, manual labeling is an impractical bottleneck. This research seeks to mitigate that limitation by introducing self-supervised methods that learn from the intrinsic structure of data. The aim is to reduce dependency on manual labels while enhancing model performance, especially in low-label settings.
-    </p>
+  <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Impact</h3>
+  <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
+    This research bridges the gap between language understanding and decision reasoning, moving beyond text classification 
+    toward concept-driven intelligence. It aims to build transparent, self-learning systems capable of generating 
+    interpretable, concept-aware insights for financial and behavioral decision-making.
+  </p>
 
-    <!-- Goals -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Goals</h3>
-    <ul data-aos="fade-up" data-aos-duration="1500" style="text-align: left; margin-bottom: 30px; line-height: 1.6;">
-      <li>Design innovative SSL tasks that work effectively on numerical, categorical, and ordinal features.</li>
-      <li>Train models on unlabeled data to learn robust representations and inter-feature relationships.</li>
-      <li>Demonstrate that fine-tuning these pretrained models with minimal labeled data outperforms traditional supervised approaches.</li>
-    </ul>
+  <hr style="border: 0; height: 1px; background-color: #444; margin: 50px 0;" />
 
-    <!-- Core Innovations -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Core Innovations</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      The proposed approach introduces a hybrid SSL architecture that combines masked feature modeling and contrastive instance discrimination. Special encoding strategies and augmentation techniques—such as column masking and row perturbation—will be tailored to the needs of tabular data, facilitating effective representation learning.
-    </p>
+  <!-- Research 2: RL + AHP -->
+  <h2 data-aos="fade-up" data-aos-duration="1500" style="color: #fff; margin-bottom: 20px;">
+    Towards Self-Learning Decision Systems: Combining Reinforcement Learning and Analytic Hierarchy Process (RL + AHP)
+  </h2>
 
-    <!-- Real-World Impact -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Real-World Impact</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      This framework is expected to significantly lower the data labeling barrier in key sectors like healthcare and finance, resulting in more efficient patient risk prediction, fraud detection, and customer churn modeling.
-    </p>
+  <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
+    This research introduces a self-learning multi-criteria decision framework that integrates 
+    <strong>Reinforcement Learning (RL)</strong> with the <strong>Analytic Hierarchy Process (AHP)</strong>. 
+    Traditional AHP relies on manually assigned weights, but this system allows an RL agent to dynamically update 
+    the pairwise comparison matrices based on real-time outcomes. The result is a continuously improving decision model 
+    capable of adapting to changing environments—ideal for <strong>business analytics, investment ranking, and policy prioritization</strong>.
+  </p>
 
-    <!-- Expected Deliverables -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Expected Deliverables</h3>
-    <ul data-aos="fade-up" data-aos-duration="1500" style="text-align: left; margin-bottom: 30px; line-height: 1.6;">
-      <li>A research paper submitted to a top-tier machine learning conference.</li>
-      <li>A public benchmark and codebase for reproducible tabular SSL experiments.</li>
-      <li>Visualization tools to showcase the learned feature representations.</li>
-    </ul>
-
-    <!-- Technologies Used -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Technologies Used</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      Python, PyTorch, Scikit-learn, UMAP, SHAP, and publicly available datasets including MIMIC-III, UCI Credit Card, and IEEE-CIS Fraud Detection.
-    </p>
-
-    <!-- Summary and Conclusion -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">Summary</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      This research pioneers a robust self-supervised learning framework for tabular data, dramatically reducing the reliance on labeled data while improving model generalization. The outcomes are expected to revolutionize approaches in data-rich, label-scarce domains.
-    </p>
-
-    <!-- Detailed Proposal Sections -->
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">1. Introduction</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      Self-supervised learning has redefined representation learning in vision and language by leveraging unlabeled data. However, its application to heterogeneous tabular data remains underexplored. This proposal outlines a tailored SSL framework that addresses the unique challenges of structured data.
-    </p>
-
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">2. Problem Statement</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      Current SSL methods fail to address the heterogeneity of features in tabular data. This project aims to create self-supervised tasks that effectively capture inter-feature relationships and feature-specific semantics, thereby enabling robust pretraining.
-    </p>
-
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">3. Objectives</h3>
-    <ul data-aos="fade-up" data-aos-duration="1500" style="text-align: left; margin-bottom: 30px; line-height: 1.6;">
-      <li>Develop a modular SSL framework for tabular data.</li>
-      <li>Design pretext tasks that capture inter-feature dependencies.</li>
-      <li>Evaluate the framework on diverse real-world datasets.</li>
-      <li>Compare against existing supervised and unsupervised baselines.</li>
-      <li>Test model robustness under low-label and distribution shifts.</li>
-    </ul>
-
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">4. Methodology</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      We propose a two-pronged approach: Masked Feature Modeling (MFM) and Contrastive Instance Discrimination (CID). MFM masks a subset of features and predicts them using context-aware encoders tailored for different feature types. CID generates multiple augmentations of the same row to learn robust representations through contrastive learning.
-    </p>
-
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">5. Novel Contributions</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      This project introduces a hybrid SSL architecture uniquely designed for tabular data, incorporates feature-specific pretext tasks, and provides a comprehensive benchmark for evaluation. The approach is domain-agnostic and generalizable across different industries.
-    </p>
-
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">6. Expected Outcomes</h3>
-    <ul data-aos="fade-up" data-aos-duration="1500" style="text-align: left; margin-bottom: 30px; line-height: 1.6;">
-      <li>A state-of-the-art SSL model for tabular data requiring significantly fewer labeled samples.</li>
-      <li>Demonstrated transferability across healthcare, finance, and other domains.</li>
-      <li>An open-source benchmark and reproducible codebase for the research community.</li>
-    </ul>
-
-    <h3 data-aos="fade-up" data-aos-duration="1500" style="color: #077b32; margin-bottom: 10px;">7. References</h3>
-    <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
-      [1] Wang, W.-Y. et al. (2024). A Survey on Self-Supervised Learning for Non-Sequential Tabular Data. arXiv.  
-      [2] Bouza, L. et al. (2024). How to estimate carbon footprint when training deep learning models? arXiv.
-    </p>
-  </section>
+  <p data-aos="fade-up" data-aos-duration="1500" style="line-height: 1.6; text-align: justify; margin-bottom: 30px;">
+    This work highlights a new frontier where classical decision theory meets adaptive learning. 
+    <strong>This study is currently under review for publication in Springer.</strong>
+  </p>
+</section>
   
   <!-- Contact / Social Links Section -->
   <section id="contact">
