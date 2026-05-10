@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Support Agent Platform - Hemand Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    .project-detail-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      color: #f0f0f0;
+      padding: 20px 0 60px;
+      line-height: 1.75;
+    }
+    .project-detail-wrap h1,
+    .project-detail-wrap h2,
+    .project-detail-wrap h3 {
+      color: #077b32;
+      text-shadow: 0 0 8px rgba(7, 123, 50, 0.45);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .project-detail-wrap h1 {
+      font-size: clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
+      margin-top: 10px;
+    }
+    .project-detail-wrap h2 {
+      font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
+      margin-top: 36px;
+    }
+    .project-detail-wrap h3 {
+      font-size: 1.1rem;
+      margin-top: 18px;
+    }
+    .project-detail-wrap p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+    .project-detail-wrap ul {
+      margin: 0 0 16px 18px;
+    }
+    .project-detail-wrap li {
+      margin-bottom: 10px;
+    }
+    .media-figure {
+      margin: 28px auto;
+      text-align: center;
+    }
+    .media-figure img {
+      width: 100%;
+      max-width: 940px;
+      height: auto;
+      border: 2px solid #077b32;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(7, 123, 50, 0.35);
+      background: #000;
+    }
+    .media-figure figcaption {
+      margin-top: 12px;
+      color: #d2d2d2;
+      font-size: 0.97rem;
+    }
+    .detail-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .detail-btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: transparent;
+      color: #077b32;
+      border: 2px solid #077b32;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+    .detail-btn:hover {
+      background: #077b32;
+      color: #000;
+      box-shadow: 0 0 20px rgba(7, 123, 50, 0.55);
+    }
+    @media (max-width: 640px) {
+      .project-detail-wrap {
+        padding: 10px 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="project-detail-wrap" data-aos="fade-up" data-aos-duration="1500">
+      <h1><strong>AI Support Agent Platform (Holos Extension)</strong></h1>
+
+      <h2><strong>Introduction</strong></h2>
+      <p>The AI Support Agent Platform is a multimodal AI-powered customer support system designed to automate issue understanding, triage, recommendation generation, and escalation workflows. The platform accepts image uploads, chat messages, and call-style transcript input to create a unified AI-assisted support pipeline.</p>
+      <p>The system was originally developed as Holos for item understanding from images and later expanded into a complete AI support orchestration platform. Instead of functioning as a simple chatbot, the architecture focuses on structured reasoning, deterministic outputs, confidence-aware automation, and human escalation pathways.</p>
+      <p>The platform combines multimodal AI reasoning using Gemini 2.5 with backend orchestration services, validation pipelines, cloud persistence, and explainable recommendation generation.</p>
+
+      <h2><strong>What It Does</strong></h2>
+      <ul>
+        <li>Accepts image uploads, chat messages, and call transcript input</li>
+        <li>Extracts structured issue context using multimodal AI reasoning</li>
+        <li>Retrieves user history and prior interaction context</li>
+        <li>Uses Gemini 2.5 for intent understanding and issue interpretation</li>
+        <li>Generates deterministic JSON-based AI outputs</li>
+        <li>Performs validation and confidence scoring</li>
+        <li>Routes low-confidence cases to human escalation workflows</li>
+        <li>Generates explainable step-by-step support recommendations</li>
+        <li>Stores interaction logs and outcomes in Supabase</li>
+        <li>Supports analytics, reporting, and operational monitoring</li>
+      </ul>
+
+      <h2><strong>Architecture Diagram</strong></h2>
+      <figure class="media-figure">
+        <img src="assets/images/holos.png" alt="AI Support Agent Platform architecture diagram" />
+        <figcaption>Architecture of the AI Support Agent Platform showing multimodal input processing, AI orchestration, validation pipelines, triage workflows, escalation handling, and operational reporting.</figcaption>
+      </figure>
+
+      <h2><strong>How It Works</strong></h2>
+      <h3><strong>Step 1: Multichannel Input Processing</strong></h3>
+      <p>The platform accepts multiple forms of user input including uploaded images, chat conversations, and voice/call transcript text. All incoming data is normalized into a structured internal request format.</p>
+
+      <h3><strong>Step 2: Context and User Retrieval</strong></h3>
+      <p>The system retrieves contextual information such as previous interactions, uploaded media, user history, and prior issue patterns. This improves continuity and reduces repetitive questioning.</p>
+
+      <h3><strong>Step 3: AI Understanding Layer</strong></h3>
+      <p>Gemini 2.5 is used for multimodal understanding. The AI model interprets uploaded images, extracts intent from text, identifies issue factors, and generates structured reasoning outputs.</p>
+
+      <h3><strong>Step 4: Structured Parsing and Validation</strong></h3>
+      <p>The backend validates AI outputs using schema-based validation rules. Confidence scores, completeness checks, and fallback handling are applied before continuing the workflow.</p>
+
+      <h3><strong>Step 5: Triage and Decision Layer</strong></h3>
+      <p>The triage layer determines issue urgency, automation eligibility, and escalation requirements. Low-confidence or high-risk cases are automatically routed to human support.</p>
+
+      <h3><strong>Step 6: Recommendation Generation</strong></h3>
+      <p>For automatable cases, the system generates clear step-by-step support guidance with confidence indicators and explainable reasoning.</p>
+
+      <h3><strong>Step 7: Escalation Workflow</strong></h3>
+      <p>Cases requiring human intervention are escalated with full context packets including user input, extracted issue factors, AI reasoning summaries, and uncertainty markers.</p>
+
+      <h3><strong>Step 8: Persistence and Reporting</strong></h3>
+      <p>All requests, outputs, timestamps, and outcome paths are stored in Supabase for analytics, reporting, auditability, and operational monitoring.</p>
+
+      <h2><strong>Agent Ecosystem</strong></h2>
+      <p><strong>Retrieval Agent:</strong><br />Collects and standardizes incoming signals and context.</p>
+      <p><strong>Understanding Agent:</strong><br />Uses Gemini 2.5 for multimodal reasoning and issue interpretation.</p>
+      <p><strong>Triage Agent:</strong><br />Assesses confidence, urgency, and automation eligibility.</p>
+      <p><strong>Resolution Agent:</strong><br />Generates explainable support recommendations.</p>
+      <p><strong>Escalation Agent:</strong><br />Routes unresolved or uncertain cases to human support.</p>
+      <p><strong>Reporting Agent:</strong><br />Handles analytics, logs, and operational reporting.</p>
+
+      <h2><strong>Backend Engineering Contributions</strong></h2>
+      <ul>
+        <li>Built Flask backend APIs for request intake and response delivery</li>
+        <li>Designed schema-aligned deterministic JSON outputs</li>
+        <li>Implemented validation and fault-tolerant fallback handling</li>
+        <li>Integrated Supabase Auth, PostgreSQL, and Storage</li>
+        <li>Created modular backend services for scalability and maintainability</li>
+        <li>Added confidence-threshold gating for safe AI automation</li>
+        <li>Developed operational logging and structured reporting pipelines</li>
+      </ul>
+
+      <h2><strong>Key Technologies</strong></h2>
+      <ul>
+        <li>Python</li>
+        <li>Flask</li>
+        <li>Gemini 2.5</li>
+        <li>Supabase</li>
+        <li>PostgreSQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>REST APIs</li>
+        <li>Structured JSON Validation</li>
+      </ul>
+
+      <h2><strong>Why This Project Is Important</strong></h2>
+      <p>This project demonstrates how AI can automate real customer support workflows using multimodal reasoning, structured validation, confidence-aware decision-making, and explainable recommendations. Unlike simple chatbot systems, the platform combines backend orchestration, AI understanding, escalation logic, and operational traceability into one scalable support architecture.</p>
+
+      <div class="detail-actions">
+        <a href="project.html" class="detail-btn">Back to Projects</a>
+        <a href="#" class="detail-btn">View Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>
