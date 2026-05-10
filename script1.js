@@ -9,6 +9,31 @@ document.addEventListener("DOMContentLoaded", function () {
       const navbar = document.querySelector(".dropdown");
       navbar.style.transform = "translateY(-500px)";
     };
+
+    // Mobile dropdown link behavior:
+    // close menu on tap and ensure same-page hash navigation works.
+    const dropdownLinks = document.querySelectorAll(".dropdown .links a");
+    dropdownLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href") || "";
+        const currentFile = window.location.pathname.split("/").pop() || "index.html";
+
+        // Always close dropdown first
+        window.cancel();
+
+        // Handle same-page hash links like index.html#about-me on the home page
+        if (currentFile === "index.html" && href.startsWith("index.html#")) {
+          e.preventDefault();
+          const targetId = href.split("#")[1];
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            setTimeout(() => {
+              targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 180);
+          }
+        }
+      });
+    });
   
     // Typewriter Effect
     const texts = [
