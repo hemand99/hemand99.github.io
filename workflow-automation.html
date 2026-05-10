@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelligent Workflow Automation - Hemand Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    .project-detail-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      color: #f0f0f0;
+      padding: 20px 0 60px;
+      line-height: 1.75;
+    }
+    .project-detail-wrap h1,
+    .project-detail-wrap h2,
+    .project-detail-wrap h3 {
+      color: #077b32;
+      text-shadow: 0 0 8px rgba(7, 123, 50, 0.45);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .project-detail-wrap h1 {
+      font-size: clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
+      margin-top: 10px;
+    }
+    .project-detail-wrap h2 {
+      font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
+      margin-top: 36px;
+    }
+    .project-detail-wrap h3 {
+      font-size: 1.1rem;
+      margin-top: 18px;
+    }
+    .project-detail-wrap p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+    .project-detail-wrap ul {
+      margin: 0 0 16px 18px;
+    }
+    .project-detail-wrap li {
+      margin-bottom: 10px;
+    }
+    .media-figure {
+      margin: 28px auto;
+      text-align: center;
+    }
+    .media-figure img {
+      width: 100%;
+      max-width: 940px;
+      height: auto;
+      border: 2px solid #077b32;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(7, 123, 50, 0.35);
+      background: #000;
+    }
+    .media-figure figcaption {
+      margin-top: 12px;
+      color: #d2d2d2;
+      font-size: 0.97rem;
+    }
+    .detail-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .detail-btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: transparent;
+      color: #077b32;
+      border: 2px solid #077b32;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+    .detail-btn:hover {
+      background: #077b32;
+      color: #000;
+      box-shadow: 0 0 20px rgba(7, 123, 50, 0.55);
+    }
+    @media (max-width: 640px) {
+      .project-detail-wrap {
+        padding: 10px 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Hemand Adish <span>Rameshkumar</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About</a>
+        <a href="achivements.html">Achievements</a>
+        <a href="current_research.html">Current Research</a>
+        <a href="pp.html">Patent &amp; Paper</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="project-detail-wrap" data-aos="fade-up" data-aos-duration="1500">
+      <h1><strong>Intelligent Workflow Automation System</strong></h1>
+
+      <h2><strong>Introduction</strong></h2>
+      <p>The Intelligent Workflow Automation System is an AI-driven decision intelligence platform designed to automate complex analysis, optimization, and recommendation workflows. The goal of the system is to replace fragmented manual processes with one integrated intelligent pipeline.</p>
+      <p>Traditional workflows often require switching between multiple tools for data collection, analysis, optimization, and reporting. This creates inefficiency, inconsistent decision-making, and slower turnaround time. This project solves that problem by combining data processing, NLP-style signal extraction, reinforcement learning optimization, and explainable recommendation generation into one unified architecture.</p>
+      <p>The system continuously improves recommendations through adaptive learning and feedback-driven optimization. Instead of relying on static rules, it dynamically updates decision weights using reinforcement learning combined with AHP-based decision modeling.</p>
+
+      <h2><strong>What It Does</strong></h2>
+      <ul>
+        <li>Collects structured and unstructured input signals</li>
+        <li>Processes market indicators, text signals, and contextual features</li>
+        <li>Cleans and normalizes incoming data</li>
+        <li>Extracts intelligent decision factors using NLP-style analysis</li>
+        <li>Builds explainable multi-factor scoring models</li>
+        <li>Uses reinforcement learning to dynamically optimize AHP decision weights</li>
+        <li>Generates actionable recommendations such as buy, hold, or sell</li>
+        <li>Produces structured outputs for dashboards and reporting systems</li>
+        <li>Continuously improves recommendations using feedback loops</li>
+      </ul>
+
+      <h2><strong>Architecture Diagram</strong></h2>
+      <figure class="media-figure">
+        <img src="assets/images/RL+AHP.png" alt="Intelligent Workflow Automation architecture diagram" />
+        <figcaption>Architecture of the Intelligent Workflow Automation System showing autonomous analysis agents, reinforcement learning optimization, AHP-based decision modeling, recommendation generation, and continuous feedback learning.</figcaption>
+      </figure>
+
+      <h2><strong>How It Works</strong></h2>
+      <h3><strong>Step 1: Input and Retrieval Layer</strong></h3>
+      <p>The system starts by collecting multiple types of input data such as market indicators, behavioral signals, text information, contextual goals, and external API data. A retrieval agent gathers and standardizes these signals into a structured format.</p>
+
+      <h3><strong>Step 2: Processing and Feature Engineering</strong></h3>
+      <p>The raw input data is cleaned, normalized, and transformed into structured features. This includes data validation, scaling, encoding, and feature engineering so the system can compare signals consistently.</p>
+
+      <h3><strong>Step 3: Analysis and Reasoning Layer</strong></h3>
+      <p>The analysis agent processes the signals and extracts important decision factors such as risk score, trend strength, momentum, confidence level, sentiment, and contextual relevance. These factors become the foundation for intelligent decision-making.</p>
+
+      <h3><strong>Step 4: Optimization Engine</strong></h3>
+      <p>This is the core innovation of the system. Instead of using static manually assigned weights, the system combines reinforcement learning with AHP-based decision modeling.</p>
+      <p>The reinforcement learning agent continuously adjusts decision weights using feedback and reward signals. This allows the system to improve recommendations dynamically over time.</p>
+
+      <h3><strong>Step 5: Recommendation Generation</strong></h3>
+      <p>The recommendation agent generates actionable outputs such as buy, hold, or sell decisions. It also provides confidence scores and explainable reasoning by showing the top contributing factors behind the recommendation.</p>
+
+      <h3><strong>Step 6: Reporting and Structured Output</strong></h3>
+      <p>The final results are formatted into dashboard-ready outputs and structured reports. This allows the recommendations to be easily integrated into visualization tools or APIs.</p>
+
+      <h3><strong>Step 7: Continuous Feedback Loop</strong></h3>
+      <p>The system continuously learns from outcomes and feedback. Performance data is evaluated, rewards are computed, and the reinforcement learning policy updates decision weights to improve future recommendations.</p>
+
+      <h2><strong>Autonomous Agent Components</strong></h2>
+      <p><strong>Retrieval Agent:</strong><br />Collects and standardizes multiple signals.</p>
+      <p><strong>Analysis Agent:</strong><br />Understands context and extracts decision factors.</p>
+      <p><strong>Optimization Agent:</strong><br />Learns and dynamically updates decision weights.</p>
+      <p><strong>Recommendation Agent:</strong><br />Produces explainable final recommendations.</p>
+      <p><strong>Reporting Agent:</strong><br />Formats outputs for dashboards and structured reporting.</p>
+
+      <h2><strong>Core Technologies</strong></h2>
+      <ul>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>NumPy</li>
+        <li>Reinforcement Learning</li>
+        <li>AHP Decision Modeling</li>
+        <li>NLP Methods</li>
+        <li>APIs</li>
+        <li>Dashboard Visualization</li>
+        <li>Structured Reporting</li>
+      </ul>
+
+      <h2><strong>Why This Project Is Important</strong></h2>
+      <p>This project demonstrates how AI can automate complete decision workflows instead of only performing isolated analysis tasks. The combination of reinforcement learning and AHP-based reasoning allows the system to generate adaptive and explainable recommendations. Unlike static rule-based systems, this architecture continuously improves over time using feedback-driven optimization.</p>
+
+      <div class="detail-actions">
+        <a href="project.html" class="detail-btn">Back to Projects</a>
+        <a href="#" class="detail-btn">View Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      };
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      };
+    });
+  </script>
+  <script src="script1.js"></script>
+</body>
+</html>
