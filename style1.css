@@ -945,6 +945,113 @@ section {
   transform: translateY(-3px);
 }
 
+/* ===================== Mobile-Only Refinements ===================== */
+@media (max-width: 768px) {
+  nav {
+    height: 74px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  .main-container {
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .main-container .image {
+    width: min(82vw, 330px);
+    height: min(82vw, 330px);
+    margin: 8px auto 0;
+    z-index: 1;
+  }
+
+  .main-container .content {
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  .content h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .content .typewriter {
+    font-size: 1.35rem;
+    text-align: center;
+    min-height: 44px;
+  }
+
+  .content p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  #about-me h2,
+  .project-container h2,
+  #achievements h2,
+  #papers-patents h1,
+  #paper h2 {
+    font-size: 2rem;
+  }
+
+  .about-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tab-button {
+    margin: 0;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .skills-container,
+  .achievement-container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .experience-item h4,
+  .education-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .project-card-title {
+    font-size: 0.92rem;
+  }
+
+  .project-card-text {
+    font-size: 0.83rem;
+    min-height: 0;
+  }
+
+  .project-card-actions .project-btn {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+
+  .know-more-link {
+    font-size: 0.78rem;
+  }
+
+  .action-btn,
+  .project-btn,
+  .know-more-btn,
+  .certificate-btn {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  .contact-links a {
+    margin: 6px;
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+}
+
 /* ===================== Paper Section Styles ===================== */
 #paper {
   max-width: 900px;
