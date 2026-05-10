@@ -16,10 +16,12 @@
       line-height: 1.75;
     }
     .project-detail-wrap h1,
-    .project-detail-wrap h2 {
+    .project-detail-wrap h2,
+    .project-detail-wrap h3 {
       color: #077b32;
       text-shadow: 0 0 8px rgba(7, 123, 50, 0.45);
       margin-bottom: 14px;
+      font-weight: 700;
     }
     .project-detail-wrap h1 {
       font-size: clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
@@ -28,6 +30,10 @@
     .project-detail-wrap h2 {
       font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
       margin-top: 36px;
+    }
+    .project-detail-wrap h3 {
+      font-size: 1.1rem;
+      margin-top: 18px;
     }
     .project-detail-wrap p {
       margin-bottom: 16px;
@@ -113,15 +119,15 @@
 
   <section>
     <div class="project-detail-wrap" data-aos="fade-up" data-aos-duration="1500">
-      <h1>FinCoach: LCM Personal Finance Coach with Multi-Agent System</h1>
+      <h1><strong>FinCoach: LCM Personal Finance Coach with Multi-Agent System</strong></h1>
 
-      <h2>Introduction</h2>
-      <p>FinCoach is an AI-powered personal finance coaching system designed to help users understand their spending behavior, financial habits, and future money decisions in a simple and personalized way. The idea behind FinCoach is to move beyond basic budgeting apps and create a system that can reason about a user’s financial situation like a coach.</p>
-      <p>The system takes financial events such as spending, income changes, savings goals, and life events, then uses a Large Concept Model layer to understand the meaning behind those events. Instead of only looking at raw transaction numbers, FinCoach tries to understand the concept of the user’s financial behavior. For example, it can recognize whether a purchase is part of a regular habit, an emergency expense, a lifestyle change, or a possible risk to a savings goal.</p>
-      <p>FinCoach also uses a multi-agent system, where different agents focus on different responsibilities. One agent can analyze spending patterns, another can evaluate goals, another can identify risk, and another can generate coaching recommendations. This makes the system easier to explain because each agent has a clear role.</p>
+      <h2><strong>Introduction</strong></h2>
+      <p>FinCoach is an AI-powered personal finance coaching system designed to help users understand spending behavior, financial habits, and future money decisions in a simple and personalized way. The goal is to move beyond basic budgeting apps and create a system that can reason like a real financial coach.</p>
+      <p>Instead of only reading raw transaction numbers, FinCoach understands the meaning behind financial events such as spending, income changes, savings goals, and life events. It can identify whether a transaction is a routine expense, an emergency, a lifestyle shift, or a possible risk to a savings target.</p>
+      <p>The platform uses a multi-agent setup where each agent has a specific role. This makes the system easier to scale, easier to explain, and better for interview-level technical discussion.</p>
 
-      <h2>What It Does</h2>
-      <p>FinCoach helps users make better financial decisions by analyzing their money behavior and converting it into useful insights. It can track spending events, understand financial context, identify patterns, and provide personalized coaching suggestions. The goal is not only to show users what they spent, but to explain why it matters and what action they can take next.</p>
+      <h2><strong>What It Does</strong></h2>
+      <p>FinCoach helps users make better financial decisions by converting financial activity into actionable coaching insights. It does not only answer "what did you spend" but also "why it matters" and "what to do next."</p>
       <ul>
         <li>Tracks spending events and financial activity</li>
         <li>Understands income, expenses, goals, and life events</li>
@@ -131,23 +137,75 @@
         <li>Helps users improve budgeting, saving, and decision-making</li>
       </ul>
 
-      <h2>Architecture Diagram</h2>
+      <h2><strong>Architecture Diagram</strong></h2>
       <figure class="arch-figure">
         <img src="assets/images/lcm_ar.png" alt="FinCoach architecture diagram" />
         <figcaption>FinCoach architecture showing raw financial data sources, LCM concept extraction, multi-agent reasoning, adaptive feedback, and personalized user recommendations.</figcaption>
       </figure>
 
-      <h2>How It Works</h2>
-      <p><strong>Step 1: User Input and Raw Data</strong><br />The process starts when the user creates a financial event, such as making a purchase, receiving income, setting a goal, or reporting a life event. This data may come from transactions, user-entered goals, budgeting records, or life events such as moving, travel, tuition, rent changes, or job changes.</p>
-      <p><strong>Step 2: Data Processing</strong><br />The raw data is cleaned and organized so the system can understand it properly. For example, spending records may be grouped by category, time, amount, and purpose. This step makes sure the data is accurate, complete, and ready for decision-making.</p>
-      <p><strong>Step 3: LCM Concept Extraction</strong><br />The Large Concept Model layer converts raw financial data into meaningful concepts. Instead of only seeing "$120 spent," the system may understand it as "recurring food expense," "unexpected travel cost," or "non-essential lifestyle spending." This helps the system reason at a higher level.</p>
-      <p><strong>Step 4: Multi-Agent Reasoning</strong><br />After the LCM layer extracts concepts, the information is passed to multiple agents. Each agent has a separate responsibility. A spending analysis agent studies patterns, a goal-planning agent checks whether the user is on track, a risk agent identifies possible financial problems, and a recommendation agent creates coaching advice.</p>
-      <p><strong>Step 5: Adaptive Feedback Loop</strong><br />The system uses feedback to improve recommendations over time. If the user accepts, ignores, or changes a recommendation, the system learns from that behavior. This helps FinCoach become more personalized and useful for each user.</p>
-      <p><strong>Step 6: User Recommendation Dashboard</strong><br />The final output is shown to the user in a simple dashboard. The dashboard explains spending patterns, risks, goals, and recommended next steps. The goal is to help users understand their financial situation clearly and make better money decisions.</p>
+      <h2><strong>How FinCoach Works</strong></h2>
+      <p>To build FinCoach, multiple AI concepts, data-processing techniques, and intelligent system components were integrated together. The platform is designed to understand financial behavior, analyze user activity, and generate personalized financial coaching recommendations.</p>
 
-      <h2>Architecture Explanation</h2>
+      <h3><strong>Libraries and Technologies Used</strong></h3>
+      <ul>
+        <li>Python: Core backend logic and data processing</li>
+        <li>Pandas: Financial data cleaning, transformation, and analysis</li>
+        <li>NumPy: Numerical operations and scoring calculations</li>
+        <li>Streamlit: Interactive dashboard and visualization</li>
+        <li>Reinforcement Learning Logic: Dynamic weight adaptation and personalized recommendations</li>
+        <li>NLP Techniques: Understanding user financial behavior and spending intent</li>
+        <li>Multi-Agent System Design: Different agents for planning, analysis, risk evaluation, and recommendation generation</li>
+      </ul>
+
+      <h3><strong>Core Concepts Used</strong></h3>
+      <ul>
+        <li>Large Concept Models (LCM)</li>
+        <li>Reinforcement Learning</li>
+        <li>Multi-Agent Systems</li>
+        <li>Financial Behavior Analysis</li>
+        <li>Decision Intelligence</li>
+        <li>Adaptive Recommendation Systems</li>
+        <li>Personalized Financial Coaching</li>
+        <li>Data Processing and Pattern Recognition</li>
+      </ul>
+
+      <h2><strong>How It Works</strong></h2>
+      <h3><strong>Step 1: Financial Data Collection</strong></h3>
+      <p>FinCoach starts by collecting user financial data from multiple sources. This includes spending events, income records, saving goals, and life events such as rent changes, travel, tuition, or job changes.</p>
+
+      <h3><strong>Step 2: Data Processing</strong></h3>
+      <p>The collected data is cleaned and organized. Transactions are categorized by amount, time, type, and spending purpose. This step ensures the model receives structured, reliable, and decision-ready data.</p>
+
+      <h3><strong>Step 3: LCM Understanding Layer</strong></h3>
+      <p>The LCM layer transforms raw numbers into financial meaning. For example, instead of only reading "$120 spent," it can classify that event as recurring food expense, emergency travel cost, or non-essential lifestyle spending.</p>
+
+      <h3><strong>Step 4: Multi-Agent Analysis</strong></h3>
+      <p>After concept extraction, different agents process the information in parallel:</p>
+      <ul>
+        <li>Spending Agent: Finds habits and spending trends</li>
+        <li>Goal Agent: Checks progress toward savings and budget goals</li>
+        <li>Risk Agent: Detects possible financial risk areas</li>
+        <li>Recommendation Agent: Builds personalized next-step coaching suggestions</li>
+      </ul>
+
+      <h3><strong>Step 5: Reinforcement Learning Feedback</strong></h3>
+      <p>FinCoach learns from user behavior over time. If users accept, reject, or ignore recommendations, the system updates internal weighting and improves future recommendations using reinforcement-style feedback logic.</p>
+
+      <h3><strong>Step 6: Dashboard Recommendation Output</strong></h3>
+      <p>Final insights are presented in a simple dashboard. Users can clearly see spending patterns, goal progress, risk alerts, and recommended actions. The dashboard is designed for practical decision-making, not just reporting.</p>
+
+      <h2><strong>Architecture Explanation</strong></h2>
       <p><strong>Raw Data Sources → Data Processing → LCM Concept Layer → Multi-Agent System → Feedback Loop → User Dashboard</strong></p>
-      <p>The raw data sources provide the financial information. The processing layer prepares the data. The LCM layer understands the meaning behind the data. The multi-agent system reasons over different financial goals and risks. The feedback loop helps the system adapt. The dashboard presents the final coaching recommendation to the user.</p>
+      <p>The raw data sources provide financial inputs. The processing layer structures that data. The LCM layer interprets the meaning behind behavior. The multi-agent system performs specialized reasoning for goals, risk, and planning. The feedback loop helps the system adapt continuously. The dashboard delivers final personalized coaching recommendations to the user.</p>
+
+      <h2><strong>Why FinCoach Is Different</strong></h2>
+      <ul>
+        <li>Traditional budgeting apps usually track only spending totals</li>
+        <li>FinCoach focuses on understanding financial behavior and intent</li>
+        <li>It uses AI reasoning instead of only static rule-based alerts</li>
+        <li>It improves with user feedback and adapts over time</li>
+        <li>It provides personalized coaching guidance, not only financial reports</li>
+      </ul>
 
       <div class="detail-actions">
         <a href="project.html" class="detail-btn">Back to Projects</a>
