@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const texts = [
       "DATA SCIENTIST",
       "MACHINE LEARNING ENGINEER",
+      "DATA ANALYST",
+      "ENTRY-LEVEL AI ENGINEER",
       "NLP-ENGINEER"
     ];
     const speed = 100;
