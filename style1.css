@@ -21,6 +21,7 @@ nav {
   height: 10vh;
   position: sticky;
   top: 0;
+  z-index: 2000;
 }
 
 .nav-container {
@@ -85,7 +86,7 @@ nav {
 }
 
 .dropdown {
-  z-index: 100;
+  z-index: 3000;
   position: absolute;
   top: 0;
   transform: translateY(-500px);
@@ -964,12 +965,25 @@ section {
     width: min(82vw, 330px);
     height: min(82vw, 330px);
     margin: 8px auto 0;
-    z-index: 1;
+    z-index: 0;
+    position: relative;
+    pointer-events: none;
   }
 
   .main-container .content {
     width: 100%;
     padding: 0 4px;
+    position: relative;
+    z-index: 1;
+  }
+
+  #about-me,
+  #projects,
+  #achievements,
+  #contact,
+  #papers-patents {
+    position: relative;
+    z-index: 2;
   }
 
   .content h1 {
