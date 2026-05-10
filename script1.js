@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Typewriter Effect
     const texts = [
-      "DATA SCIENTIST",
+      "ENTRY-LEVEL AI ENGINEER",
       "MACHINE LEARNING ENGINEER",
       "DATA ANALYST",
-      "ENTRY-LEVEL AI ENGINEER",
+      "DATA SCIENTIST",
       "NLP-ENGINEER"
     ];
     const speed = 100;
