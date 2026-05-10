@@ -593,13 +593,14 @@ section {
 
 .project-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 30px;
 }
 
 .project-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   border: 2px solid rgba(7, 123, 50, 0.75);
   border-radius: 12px;
@@ -611,18 +612,49 @@ section {
 
 .project-card img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  height: 150px;
-  max-height: 150px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   display: block;
 }
 
+.project-card-body {
+  padding: 10px 12px 12px;
+}
+
 .project-card-title {
-  padding: 8px 10px;
   color: #eaf8ee;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+}
+
+.project-card-text {
+  color: #d9e7dd;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  min-height: 3.8em;
+}
+
+.project-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-card-actions .project-btn {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.know-more-link {
+  color: #7bdb9b;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: underline;
 }
 
 .project-card:hover {
@@ -641,10 +673,6 @@ section {
   .project-card-grid {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-  .project-card img {
-    height: 170px;
-    max-height: 170px;
   }
 }
 
