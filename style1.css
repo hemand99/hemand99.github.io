@@ -946,6 +946,48 @@ section {
   transform: translateY(-3px);
 }
 
+/* ===================== Fullscreen Image Viewer ===================== */
+.arch-fullscreen {
+  cursor: zoom-in;
+}
+
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 20px;
+}
+
+.img-lightbox.open {
+  display: flex;
+}
+
+.img-lightbox img {
+  max-width: min(1200px, 96vw);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border: 2px solid #077b32;
+  border-radius: 10px;
+  box-shadow: 0 0 35px rgba(7, 123, 50, 0.35);
+}
+
+.img-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 2rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
 /* ===================== Mobile-Only Refinements ===================== */
 @media (max-width: 768px) {
   nav {

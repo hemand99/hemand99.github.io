@@ -34,6 +34,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+    // Fullscreen viewer for architecture images
+    const archImages = document.querySelectorAll(".arch-fullscreen");
+    if (archImages.length > 0) {
+      const lightbox = document.createElement("div");
+      lightbox.className = "img-lightbox";
+      lightbox.innerHTML = `
+        <button class="img-lightbox-close" aria-label="Close image">&times;</button>
+        <img src="" alt="Fullscreen architecture image" />
+      `;
+      document.body.appendChild(lightbox);
+
+      const lightboxImg = lightbox.querySelector("img");
+      const closeBtn = lightbox.querySelector(".img-lightbox-close");
+
+      const closeLightbox = () => {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+      };
+
+      archImages.forEach((img) => {
+        img.addEventListener("click", (e) => {
+          e.preventDefault();
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt || "Architecture image";
+          lightbox.classList.add("open");
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+    }
   
     // Typewriter Effect
     const texts = [
